@@ -1,0 +1,12 @@
+---
+- hosts:  all
+  become: true
+  tasks: 
+
+  - name: update patch
+    zypper:
+     update_cache: yes
+
+  - name: inatall apache2 package
+    zypper:
+     name: apache2
